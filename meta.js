@@ -74,32 +74,20 @@ module.exports = {
             type: 'confirm',
             message: 'Install vue-router?',
         },
+        vuex: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Install vuex?',
+        },
+        lodash: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Install lodash?',
+        },
         lint: {
             when: 'isNotTest',
             type: 'confirm',
             message: 'Use ESLint to lint your code?',
-        },
-        lintConfig: {
-            when: 'isNotTest && lint',
-            type: 'list',
-            message: 'Pick an ESLint preset',
-            choices: [
-                {
-                    name: 'Standard (https://github.com/standard/standard)',
-                    value: 'standard',
-                    short: 'Standard',
-                },
-                {
-                    name: 'Airbnb (https://github.com/airbnb/javascript)',
-                    value: 'airbnb',
-                    short: 'Airbnb',
-                },
-                {
-                    name: 'none (configure it yourself)',
-                    value: 'none',
-                    short: 'none',
-                },
-            ],
         },
         unit: {
             when: 'isNotTest',
@@ -170,6 +158,7 @@ module.exports = {
         'test/unit/setup.js': "unit && runner === 'jest'",
         'test/e2e/**/*': 'e2e',
         'src/router/**/*': 'router',
+        'src/store/**/*': 'vuex',
     },
     complete: function(data, { chalk }) {
         const green = chalk.green

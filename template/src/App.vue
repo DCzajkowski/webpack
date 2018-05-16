@@ -21,6 +21,8 @@
     }
 </script>
 
+{{#tailwindcss}}<style src="./styles/app.css"></style>
+{{/tailwindcss}}
 <style>
     /* */
 </style>

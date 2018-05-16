@@ -118,6 +118,9 @@
     "portfinder": "^1.0.13",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
+    {{#tailwindcss}}
+    "tailwindcss": "^0.5.3",
+    {{/tailwindcss}}
     "webpack-merge": "^4.1.0"
   },
   "engines": {

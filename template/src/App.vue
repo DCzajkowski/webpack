@@ -14,10 +14,10 @@
 
     {{/unless}}
     export default {
-        name: 'App'{{#router}}{{else}},
+        name: 'App',{{#unless router}}
         components: {
             HelloWorld,
-        },{{/router}}
+        },{{/unless}}
     }
 </script>
 
